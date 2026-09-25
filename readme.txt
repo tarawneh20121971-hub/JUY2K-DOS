@@ -97,14 +97,40 @@ The supplied BUILD_98.BAT is a modern Windows CMD build helper. It is
 not a batch file for COMMAND.COM on the target DOS computer. The source
 is currently built with NASM 3.02 on the development computer.
 
-The uploaded files are at the repository root. To use BUILD_98.BAT
-unchanged, arrange these files relative to the batch file:
+BUILD_98.BAT is at the repository root. The assembly source is already
+in src\variants. The required paths relative to the batch file are:
 
   src\variants\JUY2KC98.ASM
   tools\nasm-3.02\nasm.exe
 
-NASM is not included. The batch file creates the output and report
-directories. The target DOS computer needs only the COM file.
+NASM is not included. Download NASM 3.02 from the official site:
+
+  https://www.nasm.us/
+  https://www.nasm.us/pub/nasm/releasebuilds/3.02/
+
+On the release page, open win64 for a 64-bit Windows build computer,
+or win32 for a 32-bit Windows build computer. Download the binary ZIP
+package, not the source archive at the top level of the release page.
+
+Extract the package. Create tools\nasm-3.02 under the repository root
+and place the extracted nasm.exe directly inside that directory.
+Avoid an extra nested nasm-3.02 directory. The final path must be:
+
+  tools\nasm-3.02\nasm.exe
+
+Open Windows Command Prompt in the repository root and check:
+
+  tools\nasm-3.02\nasm.exe -v
+
+The version should be 3.02. Then run:
+
+  BUILD_98.BAT
+
+The batch file creates the output and report directories. A successful
+build writes bin\98\JUY2KC98.COM. The existing COM at the repository
+root is a saved copy and is not replaced by this build command.
+Copy the newly built COM to the target DOS computer for use there.
+NASM and this Windows build procedure are not needed on that computer.
 
 TEST STATUS
 
