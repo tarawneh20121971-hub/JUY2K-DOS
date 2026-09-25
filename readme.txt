@@ -9,7 +9,14 @@ for the DOS computers in use before the change from 1999 to 2000.
 This background is supplied by the original author.
 
 This repository preserves a current development version of that work.
-It must not be mistaken for an unchanged copy of the original 1998 files.
+It must not be mistaken for an unchanged copy of the original 1999 files.
+
+LICENSE
+
+Copyright (c) 1999-2026 Rami Awad Al-Tarawneh.
+This project is distributed under the MIT License. See LICENSE.txt.
+The original work dates from 1999. MIT licensing was adopted in 2026;
+this does not claim that the original release carried that license.
 
 WHAT IT DOES
 
